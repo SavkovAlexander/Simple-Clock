@@ -36,6 +36,7 @@ class SettingsActivity : SimpleActivity() {
         setupVibrate()
         setupTimerMaxReminder()
         setupIncreaseVolumeGradually()
+        setupShowDate()
         setupUseTextShadow()
         setupCustomizeWidgetColors()
         updateTextColors(settings_holder)
@@ -174,6 +175,15 @@ class SettingsActivity : SimpleActivity() {
         settings_use_text_shadow_holder.setOnClickListener {
             settings_use_text_shadow.toggle()
             config.useTextShadow = settings_use_text_shadow.isChecked
+            updateWidgets()
+        }
+    }
+
+    private fun setupShowDate() {
+        settings_show_date.isChecked = config.showDateInWidget
+        settings_show_date_holder.setOnClickListener {
+            settings_show_date.toggle()
+            config.showDateInWidget = settings_show_date.isChecked
             updateWidgets()
         }
     }

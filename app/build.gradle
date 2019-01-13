@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.simplemobiletools:commons:4.7.10'
+    implementation 'com.github.savkovalexander:simple-commons:0c1daba939c0893c22c3dd10c30837716982f41b'
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.shawnlin:number-picker:2.4.6'

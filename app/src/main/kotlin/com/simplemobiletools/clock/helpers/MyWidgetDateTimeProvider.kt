@@ -61,6 +61,7 @@ class MyWidgetDateTimeProvider : AppWidgetProvider() {
         views.apply {
             setText(R.id.widget_time, timeText)
             setText(R.id.widget_date, context.getFormattedDate(Calendar.getInstance()))
+            setVisibleIf(R.id.widget_date, context.config.showDateInWidget)
             setText(R.id.widget_next_alarm, nextAlarm)
             setVisibleIf(R.id.widget_alarm_holder, nextAlarm.isNotEmpty())
         }
